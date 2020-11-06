@@ -1,0 +1,10 @@
+<html>
+<head>
+<title>测试</title>
+</head>
+<body>
+<#list lhy as i>
+    <h2>${i}</h2>
+</#list>
+</body>
+</html>

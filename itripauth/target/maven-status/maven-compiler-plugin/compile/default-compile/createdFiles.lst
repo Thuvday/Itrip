@@ -1,0 +1,6 @@
+cn\itrip\controller\registerController.class
+cn\itrip\help\ItripUserVO.class
+cn\itrip\help\SMS.class
+cn\itrip\controller\loginController.class
+cn\itrip\controller\hotelController.class
+cn\itrip\controller\SwaggerConfig.class
