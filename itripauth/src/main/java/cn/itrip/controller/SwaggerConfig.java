@@ -30,7 +30,6 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
      * apiInfo()用来创建该Api的基本信息（这些基本信息会展现在文档页面中）
      * select()函数返回一个ApiSelectorBuilder实例用来控制哪些接口暴露给Swagger来展现，
      * apis()函数扫描所有Controller中定义的API， 并产生文档内容（除了被@ApiIgnore指定的请求）
-     *
      * @return
      */
     @Bean
@@ -51,12 +50,10 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
-
     }
 
     /**
      * 创建该Api的基本信息（这些基本信息会展现在文档页面中）
-     *
      * @return
      */
     private ApiInfo apiInfo() {
@@ -75,5 +72,4 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
-
 }
