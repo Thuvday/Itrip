@@ -1,7 +1,6 @@
 package cn.itrip.dao;
 
 import cn.itrip.help.ItripHotelVO;
-import cn.itrip.help.SearchHotCityVO;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.impl.XMLResponseParser;
