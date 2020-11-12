@@ -1,6 +1,5 @@
-package cn.itrip.test;
+package cn.itrip.dao;
 
-import cn.itrip.entity.itripHotel;
 import cn.itrip.help.ItripHotelVO;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
