@@ -1,6 +1,7 @@
 package cn.itrip.test;
 
 import cn.itrip.entity.itripHotel;
+import cn.itrip.help.ItripHotelVO;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.impl.XMLResponseParser;
@@ -14,7 +15,7 @@ public class solrTest {
         //初始化HttpSolrClient
         HttpSolrClient httpSolrClient = new HttpSolrClient(url);
         httpSolrClient.setParser(new XMLResponseParser()); // 设置响应解析器
-        httpSolrClient.setConnectionTimeout(500); // 建立连接的最长时间
+        httpSolrClient.setConnectionTimeout(5000); // 建立连接的最长时间
         // 初始化SolrQuery
         SolrQuery query = new SolrQuery("id:1");
         // query.setSort("id", SolrQuery.ORDER.asc);
@@ -24,9 +25,9 @@ public class solrTest {
         QueryResponse queryResponse;
         try {
             queryResponse = httpSolrClient.query("hotel", query);
-            List<itripHotel> list;
-            list = queryResponse.getBeans(itripHotel.class);
-            for (itripHotel hotel : list) {
+            List<ItripHotelVO> list;
+            list = queryResponse.getBeans(ItripHotelVO.class);
+            for (ItripHotelVO hotel : list) {
                 System.out.println(hotel.getId()+"-"+hotel.getHotelName()+"-"+hotel.getAddress());
             }
         } catch (Exception e) {
