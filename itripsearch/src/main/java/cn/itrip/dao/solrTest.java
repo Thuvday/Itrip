@@ -1,6 +1,6 @@
 package cn.itrip.dao;
 
-import cn.itrip.help.ItripHotelVO;
+import cn.itrip.entity.ItripHotelVO;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.impl.XMLResponseParser;
@@ -16,7 +16,8 @@ public class solrTest {
         httpSolrClient.setParser(new XMLResponseParser()); // 设置响应解析器
         httpSolrClient.setConnectionTimeout(5000); // 建立连接的最长时间
         // 初始化SolrQuery
-        SolrQuery query = new SolrQuery("id:1");
+        SolrQuery query = new SolrQuery("*:*");
+        query.addFilterQuery("destination:北京市");
         // query.setSort("id", SolrQuery.ORDER.asc);
         query.setStart(0);
         //一页显示多少条

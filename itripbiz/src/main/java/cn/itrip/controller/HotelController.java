@@ -3,7 +3,6 @@ package cn.itrip.controller;
 import cn.itrip.common.Dto;
 import cn.itrip.common.DtoUtil;
 import cn.itrip.dao.itripAreaDic.ItripAreaDicMapper;
-import cn.itrip.dao.itripHotel.ItripHotelMapper;
 import cn.itrip.dao.itripLabelDic.ItripLabelDicMapper;
 import cn.itrip.pojo.ItripAreaDic;
 import cn.itrip.pojo.ItripLabelDic;
@@ -32,6 +31,13 @@ public class HotelController {
     @ResponseBody
     public Dto getFeature() throws Exception {
         List<ItripLabelDic> list = dao1.getFeature();
+        return DtoUtil.returnDataSuccess(list);
+    }
+
+    @RequestMapping("/api/hotel/querytradearea/{id}")
+    @ResponseBody
+    public Dto getHotArea(@PathVariable("id") int id) throws Exception {
+        List<ItripAreaDic> list = dao.getHotArea(id);
         return DtoUtil.returnDataSuccess(list);
     }
 }

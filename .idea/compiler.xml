@@ -9,6 +9,7 @@
         <module name="itriputils" />
         <module name="itripbiz" />
         <module name="itripdao" />
+        <module name="itriptrade" />
         <module name="itripbeans" />
         <module name="itripsearch" />
         <module name="itripauth" />

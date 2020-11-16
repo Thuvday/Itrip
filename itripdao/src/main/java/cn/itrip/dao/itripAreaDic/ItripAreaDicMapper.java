@@ -10,7 +10,7 @@ public interface ItripAreaDicMapper {
 
 	public List<ItripAreaDic> getHot(@Param(value = "type") int type)throws Exception;
 
-
+	public List<ItripAreaDic> getHotArea(@Param(value = "id") int id)throws Exception;
 
 	public ItripAreaDic getItripAreaDicById(@Param(value = "id") Long id)throws Exception;
 
