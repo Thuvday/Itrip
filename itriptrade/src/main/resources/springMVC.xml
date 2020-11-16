@@ -10,6 +10,16 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="pay" class="cn.itrip.util.WXPayConfig">
+		<property name="appID" value="wx83042729f42494f6"/>
+		<property name="mchID" value="1496893892"/>
+		<property name="key" value="6c101469fb56170c358cf2f19d6e88c4"/>
+		<property name="notifyUrl" value="http://354465l6d6.qicp.vip/trade/Pay2"></property>
+		<property name="money" value="1"/>
+		<property name="title" value="房屋租赁费用" />
+	</bean>
+
 	<!-- 注解的扫描包 记住不能用* -->
 	<context:component-scan base-package="cn.itrip"/>
 	<!-- mvc驱动 -->

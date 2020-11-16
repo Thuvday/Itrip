@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>code</title>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
+</head>
+<body>
+<div id="output"></div>
+<script>
+    $(function () {
+        $.ajax({
+            url: 'http://354465l6d6.qicp.vip/trade/Pay1?orderid=399',
+            type: 'get',
+            data: {},
+            success: function (data) {
+                $('#output').qrcode(data.code_url);
+            }
+        })
+    })
+</script>
+</body>
+</html>
